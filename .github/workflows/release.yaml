@@ -38,10 +38,10 @@ jobs:
                     ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
             # Set up the Node.js environment for the runner
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Use Node.js 14.x
               uses: actions/setup-node@v3
               with:
-                node-version: ${{ matrix.node-version }}
+                node-version: 14.x
                 cache: "npm"
 
             # Install project dependencies
